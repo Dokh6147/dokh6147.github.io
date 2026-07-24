@@ -1,7 +1,12 @@
 /* -----------------------------------------------------------
  * 1. FONTIT
  * ----------------------------------------------------------- */
-
+@font-face {
+    font-family: 'JunicodeVF';
+    src: url('JunicodeVF-Roman.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 /* -----------------------------------------------------------
  * 2. YLEISET ASETUKSET (BODY)
  * ----------------------------------------------------------- */
@@ -38,7 +43,7 @@ body {
     height: 1.5em;
     border: 3px solid #ffffff;
     border-radius: 50%;
-    font-family: 'Junicode', serif;
+    font-family: 'JunicodeVF', serif;
     font-size: 5em;
     
     /* Varmistetaan, että ympyrän sisusta on saman värinen kuin sivun tausta, 
@@ -69,7 +74,7 @@ body {
  * 5. PÄÄOTSIKKO
  * ----------------------------------------------------------- */
 .main-title {
-    font-family: 'Times New Roman', serif;
+    font-family: 'JunicodeVF', serif;
     text-align: center; /* Keskittää otsikon */
     font-size: 2.8em; /* Otsikon koko */
     font-weight: normal; /* Voidaan pitää normaalina retromman fiiliksen vuoksi */
