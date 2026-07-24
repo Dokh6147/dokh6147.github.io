@@ -97,16 +97,31 @@ body {
 /* -----------------------------------------------------------
  * 9. MOBIILIYSTÄVÄLLISYYS (MEDIA QUERY)
  * ----------------------------------------------------------- */
-/* Nämä säännöt otetaan käyttöön VAIN, jos laitteen näyttö on 768px leveä tai kapeampi (esim. älypuhelin) */
 @media (max-width: 768px) {
     .three-column-grid {
-        flex-direction: column; /* Muuttaa sarakkeet rinnakkaisista päällekkäisiksi */
-        gap: 40px; /* Antaa päällekkäisille kuville hieman isomman välin */
+        flex-direction: column;
+        gap: 40px;
     }
 
     .main-title {
-        font-size: 2.2em; /* Pienentää pääotsikkoa hieman pienille näytöille */
+        font-size: 2.2em;
     }
+
+    /* Lisätty .footer-text tähän samaan sääntöön .main-text kanssa */
+    .main-text, .footer-text {
+        text-align: left; 
+    }
+}
+   /* -----------------------------------------------------------
+ * 10. ALAREUNAN TEKSTIKENTTÄ
+ * ----------------------------------------------------------- */
+.footer-text {
+    font-size: 1.2em; /* Sama koko kuin päätekstillä */
+    line-height: 1.6;
+    margin-top: 60px; /* Jättää reilusti happea yläpuolella olevien kuvien ja tämän tekstin väliin */
+    margin-bottom: 20px;
+    text-align: justify; /* Tasaa tekstin molempiin reunoihin ylätekstin tavoin */
+}
 
     .main-text {
         text-align: left; /* Mobiilissa tasattu teksti voi näyttää huonolta, muutetaan vasemmalle tasatuksi */
