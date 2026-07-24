@@ -28,35 +28,41 @@ body {
 }
 
 /* -----------------------------------------------------------
- * 4. YLÄKUVA / SYMBOLI GRID-ASETTELULLA
+ * 4. YLÄKUVA / SYMBOLI - TÄYDELLINEN KESKITYS
  * ----------------------------------------------------------- */
 .top-image-container {
     text-align: center;
     margin-bottom: 30px;
 }
 
-/* Käytetään Grid-asettelua, joka keskittää kaiken täydellisesti keskelle */
+/* Ympyrä */
 .top-symbol {
-    display: inline-grid;
-    place-items: center; /* Keskittää elementit suoraan keskelle vaakasuunnassa ja pystysuunnassa */
-    width: 0.4em;
-    height: 0.4em;
+    position: relative; /* Luo "kehyksen", jonka sisällä tähtiä voi liikuttaa vapaasti */
+    display: inline-block; /* Pakottaa elementin käyttäymään yhtenäisenä laatikkona */
+    width: 1em;
+    height: 1em;
     box-sizing: border-box;
     border: 3px solid #222222;
     border-radius: 50%;
     font-family: 'JunicodeVF', serif;
     font-size: 5em;
-    background-color: #f4f1ea; 
+    background-color: #f4f1ea;
+    
+    /* TÄRKEÄ: Korjaa ympyrän oman pystyasennon suhteessa sivun linjaan */
+    vertical-align: middle; 
 }
 
-/* Pinotaan molemmat merkit tismaleen samaan ruutuun */
+/* Molemmat pentagrammit */
 .pentagram-white, 
 .pentagram-black {
-    grid-area: 1 / 1; /* Pakottaa molemmat elementit saman ruudun päällekkäin */
-    line-height: 1;   /* Poistaa fontin oletusrivikorkeuden aiheuttaman alas valumisen */
+    position: absolute; /* Irrotetaan normaalista tekstivirrasta */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Lukitsee tähtien keskipisteen tismaleen ympyrän keskelle */
+    line-height: 1;
 }
 
-/* Värit pysyvät ennallaan */
+/* Värit */
 .pentagram-white {
     color: #ffffff;
 }
