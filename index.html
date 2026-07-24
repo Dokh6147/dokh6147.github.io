@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    
+    <!-- Tämä rivi tekee sivusta mobiiliystävällisen ja käskee selainta tunnistamaan ruudun leveyden -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Retro Sivusto</title>
+    
+    <!-- Linkitetään erillinen CSS-tyylitiedosto sivulle -->
+    <link rel="stylesheet" href="tyylit.css">
+    
+    <!-- Ladataan EB Garamond -fontti suoraan Google Fonts -palvelimelta -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- PÄÄSÄILIÖ: Tämä rajoittaa sivun maksimileveyttä ja pitää kaiken siististi linjassa -->
+    <div class="container">
+
+        <!-- YLIN KUVA: Keskitetty yksittäinen kuva ylhäällä -->
+        <div class="top-image-container">
+            <!-- Vaihda src-kohtaan oman kuvasi polku ja nimi -->
+            <img src="ylakuva.jpg" alt="Sivuston yläkuva" class="top-image">
+        </div>
+
+        <!-- PÄÄOTSIKKO: Käyttää Junicode-fonttia -->
+        <h1 class="main-title">Sivuston Pääotsikko Tähän</h1>
+
+        <!-- PÄÄLEIPÄTEKSTI: Koska tämä on samassa säiliössä alakuviin nähden, sen leveys myötäilee täydellisesti alakuvia -->
+        <p class="main-text">
+            Tämä on sivuston yläosan leipäteksti. Se käyttää EB Garamond -fonttia. Kun luet tätä tietokoneella, teksti levittäytyy koko säiliön levyiseksi. Säiliön leveys puolestaan määrittää alla olevien kolmen kuvan yhteisleveyden (mukaan lukien niiden väliset tyhjät tilat). Näin taataan, että teksti ja kuvat ovat täydellisesti linjassa keskenään.
+        </p>
+
+        <!-- KOLMEN KUVAN RIVISTÖ: Rinnakkainen asettelu -->
+        <div class="three-column-grid">
+
+            <!-- Ensimmäinen kuva + teksti -->
+            <div class="column">
+                <img src="kuva1.jpg" alt="Ensimmäinen pikkukuva" class="column-image">
+                <p class="column-text">Tässä on ensimmäisen kuvan teksti. Se pysyy visusti oman kuvansa leveyden rajoissa, aivan kuten pyysit.</p>
+            </div>
+
+            <!-- Toinen kuva + teksti -->
+            <div class="column">
+                <img src="kuva2.jpg" alt="Toinen pikkukuva" class="column-image">
+                <p class="column-text">Toisen kuvan teksti on tässä. Kaikki fontit ja rivivälit tekevät lukemisesta miellyttävää.</p>
+            </div>
+
+            <!-- Kolmas kuva + teksti -->
+            <div class="column">
+                <img src="kuva3.jpg" alt="Kolmas pikkukuva" class="column-image">
+                <p class="column-text">Ja tässä kolmannen kuvan teksti. Mobiililaitteella katsoessa tämä kaikki asettuu siististi peräkkäin alaspäin.</p>
+            </div>
+
+     </div> <!-- Kolmen kuvan rivistö (three-column-grid) päättyy tähän -->
+
+        <!-- ALAREUNAN TEKSTIKENTTÄ:  -->
+        <p class="footer-text">
+          LUKUPIIRI:
+          2026 
+          SYKSY
+          Kirjoituksia magiasta II: Dzyanin kirjan maaginen kommentaari
+          
+          KEVÄT
+          
+        </p>
+
+    </div> <!-- Pääsäiliö (container) päättyy tähän -->
+
+</body>
+</html>
