@@ -109,7 +109,7 @@ body {
     }
 
     /* Lisätty .footer-text tähän samaan sääntöön .main-text kanssa */
-    .main-text, .footer-text {
+    .main-text {
         text-align: left; 
     }
 }
