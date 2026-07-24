@@ -38,8 +38,8 @@ body {
 .top-symbol {
     position: relative;
     display: inline-flex;
-    width: 1em;          /* Muutettu 1.5em -> 1em, jotta ympyrä tiivistyy merkin ympärille */
-    height: 1em;         /* Sama korkeudelle */
+    width: 0.5em;          /* Muutettu 1.5em -> 1em, jotta ympyrä tiivistyy merkin ympärille */
+    height: 0.5em;         /* Sama korkeudelle */
     box-sizing: border-box; /* Varmistaa, että reunus mahtuu tähän 1em-kokoon */
     border: 3px solid #222222;
     border-radius: 50%;
