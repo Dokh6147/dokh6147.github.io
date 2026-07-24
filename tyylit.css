@@ -39,8 +39,8 @@ body {
 .top-symbol {
     display: inline-grid;
     place-items: center; /* Keskittää sisällön (sekä vaaka- että pystysuunnassa) */
-    width: 0.8em;
-    height: 0.8em;
+    width: 0.9em;
+    height: 0.9em;
     box-sizing: border-box;
     border: 3px solid #222222;
     border-radius: 50%;
@@ -52,6 +52,7 @@ body {
 }
 
 /* Molemmat pentagrammit pakotetaan tismalleen samaan grid-soluun päällekkäin */
+.top-symbol,
 .pentagram-white, 
 .pentagram-black {
     grid-area: 1 / 1; 
