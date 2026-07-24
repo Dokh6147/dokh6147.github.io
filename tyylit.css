@@ -39,7 +39,7 @@ body {
  * 5. PÄÄOTSIKKO
  * ----------------------------------------------------------- */
 .main-title {
-    font-family: 'Junicode', 'Times New Roman', serif; /* Käyttää Junicodea, tai varafonttina Times New Romania */
+    font-family: 'Times New Roman', serif;
     text-align: center; /* Keskittää otsikon */
     font-size: 2.8em; /* Otsikon koko */
     font-weight: normal; /* Voidaan pitää normaalina retromman fiiliksen vuoksi */
@@ -72,7 +72,6 @@ body {
     flex: 1; /* Tekee kaikista kolmesta sarakkeesta täsmälleen yhtä leveät */
     display: flex;
     flex-direction: column; /* Laittaa kuvan ja tekstin allekkain sarakkeen sisällä */
-    white-space: pre-line;
 }
 
 .column-image {
@@ -86,6 +85,7 @@ body {
     line-height: 1.5;
     margin: 0;
     text-align: justify; /* Tasaa myös pikkukuvien tekstit reunoihin */
+    white-space: pre-line;
 }
 
 /* -----------------------------------------------------------
