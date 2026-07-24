@@ -57,7 +57,7 @@ body {
 .pentagram-black {
     grid-area: 1 / 1; 
     line-height: 1;
-    transform: translateY(0.2em);
+    transform: translateY(-0.4em);
 }
 
 /* Värit */
