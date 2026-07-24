@@ -35,19 +35,16 @@ body {
     margin-bottom: 30px;
 }
 
-/* Tämä on ympyrä, joka pitää pentagrammit sisällään */
 .top-symbol {
-    position: relative; /* Tämä on tärkeä! Se lukitsee sisällä olevat absoluuttiset elementit tähän laatikkoon */
+    position: relative;
     display: inline-flex;
-    width: 1.5em;
-    height: 1.5em;
-    border: 3px solid #ffffff;
+    width: 1em;          /* Muutettu 1.5em -> 1em, jotta ympyrä tiivistyy merkin ympärille */
+    height: 1em;         /* Sama korkeudelle */
+    box-sizing: border-box; /* Varmistaa, että reunus mahtuu tähän 1em-kokoon */
+    border: 3px solid #222222;
     border-radius: 50%;
     font-family: 'JunicodeVF', serif;
     font-size: 5em;
-    
-    /* Varmistetaan, että ympyrän sisusta on saman värinen kuin sivun tausta, 
-       jotta valkoinen merkki erottuu oikein */
     background-color: #f4f1ea; 
 }
 
