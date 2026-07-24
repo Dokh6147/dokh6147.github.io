@@ -2,15 +2,6 @@
  * 1. FONTIT
  * ----------------------------------------------------------- */
 
-/* Määritellään Junicode-fontti. Jos lataat fonttitiedoston (esim. junicode.woff2)
-   samaan kansioon, voit laittaa url-kohtaan tiedoston nimen. */
-@font-face {
-    font-family: 'Junicode';
-    src: local('Junicode'), local('Junicode-Regular');
-    /* Esimerkki fontin linkityksestä omalta koneelta:
-       src: url('Junicode.woff2') format('woff2'); */
-}
-
 /* -----------------------------------------------------------
  * 2. YLEISET ASETUKSET (BODY)
  * ----------------------------------------------------------- */
