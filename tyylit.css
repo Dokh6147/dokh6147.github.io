@@ -21,9 +21,7 @@ body {
     margin: 0; /* Poistaa selaimeen vakiona tulevat valkoiset reunat */
     padding: 30px 15px; /* Antaa tilaa ylös ja sivuille, ettei teksti osu ruudun reunaan */
 }
-/* Vain yläteksti tasataan vasemmalle mobiilissa, alateksti pysyy keskitettynä */
-    .main-text {
-        text-align: left;
+
 
 /* -----------------------------------------------------------
  * 3. PÄÄSÄILIÖ (JOKA PITÄÄ KAIKEN LINJASSA)
@@ -127,3 +125,6 @@ body {
     text-align: center; /* TÄMÄ KESKITTÄÄ TEKSTIN */
     white-space: pre-line; /* TÄMÄ MUUTTAA KOODIN RIVINVAIHDOT SUORAAN <br>-TAGEIKSI */
 }
+/* Vain yläteksti tasataan vasemmalle mobiilissa, alateksti pysyy keskitettynä */
+    .main-text {
+        text-align: left;
