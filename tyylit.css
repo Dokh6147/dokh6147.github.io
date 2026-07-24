@@ -28,17 +28,17 @@ body {
 }
 
 /* -----------------------------------------------------------
- * 4. YLÄKUVA / SYMBOLI - TÄYDELLINEN KESKITYS
+ * 4. YLÄKUVA / SYMBOLI - PUHDAS GRID-KESKITYS
  * ----------------------------------------------------------- */
 .top-image-container {
     text-align: center;
     margin-bottom: 30px;
 }
 
-/* Ympyrä */
+/* Ympyrä toimii nyt Grid-kontainerina, joka keskittää kaiken sisällään täydellisesti */
 .top-symbol {
-    position: relative; /* Luo "kehyksen", jonka sisällä tähtiä voi liikuttaa vapaasti */
-    display: inline-block; /* Pakottaa elementin käyttäymään yhtenäisenä laatikkona */
+    display: inline-grid;
+    place-items: center; /* Keskittää sisällön (sekä vaaka- että pystysuunnassa) */
     width: 1em;
     height: 1em;
     box-sizing: border-box;
@@ -47,18 +47,14 @@ body {
     font-family: 'JunicodeVF', serif;
     font-size: 5em;
     background-color: #f4f1ea;
-    
-    /* TÄRKEÄ: Korjaa ympyrän oman pystyasennon suhteessa sivun linjaan */
-    vertical-align: middle; 
+    vertical-align: middle; /* Varmistaa, että ympyrä asettuu oikealle korkeudelle rivillään */
+    line-height: 1;
 }
 
-/* Molemmat pentagrammit */
+/* Molemmat pentagrammit pakotetaan tismalleen samaan grid-soluun päällekkäin */
 .pentagram-white, 
 .pentagram-black {
-    position: absolute; /* Irrotetaan normaalista tekstivirrasta */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Lukitsee tähtien keskipisteen tismaleen ympyrän keskelle */
+    grid-area: 1 / 1; 
     line-height: 1;
 }
 
@@ -69,16 +65,6 @@ body {
 
 .pentagram-black {
     color: #222222;
-}
-/* -----------------------------------------------------------
- * 5. PÄÄOTSIKKO
- * ----------------------------------------------------------- */
-.main-title {
-    font-family: 'JunicodeVF', serif;
-    text-align: center; /* Keskittää otsikon */
-    font-size: 2.8em; /* Otsikon koko */
-    font-weight: normal; /* Voidaan pitää normaalina retromman fiiliksen vuoksi */
-    margin-bottom: 20px;
 }
 
 /* -----------------------------------------------------------
