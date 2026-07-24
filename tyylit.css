@@ -20,44 +20,36 @@ body {
 
 
 /* -----------------------------------------------------------
- * 3. PÄÄSÄILIÖ (JOKA PITÄÄ KAIKEN LINJASSA)
- * ----------------------------------------------------------- */
-.container {
-    max-width: 960px; /* Tämä arvo määrittää sivun ja kuvien/tekstin maksimileveyden */
-    margin: 0 auto; /* Tämä keskittää koko sivuston keskelle näyttöä */
-}
-
-/* -----------------------------------------------------------
- * 4. YLÄKUVA / SYMBOLI - PUHDAS GRID-KESKITYS
+ * 4. YLÄKUVA / SYMBOLI - TODELLINEN KESKITYS
  * ----------------------------------------------------------- */
 .top-image-container {
     text-align: center;
     margin-bottom: 30px;
 }
 
-/* Ympyrä toimii nyt Grid-kontainerina, joka keskittää kaiken sisällään täydellisesti */
+/* Ympyrä toimii absoluuttisen paikannuksen ankkurina (relative) */
 .top-symbol {
-    display: inline-grid;
-    place-items: center; /* Keskittää sisällön (sekä vaaka- että pystysuunnassa) */
-    width: 0.9em;
-    height: 0.9em;
+    position: relative;
+    display: inline-block;
+    width: 0.8em;
+    height: 0.8em;
     box-sizing: border-box;
     border: 3px solid #222222;
     border-radius: 50%;
     font-family: 'JunicodeVF', serif;
     font-size: 5em;
     background-color: #f4f1ea;
-    vertical-align: middle; /* Varmistaa, että ympyrä asettuu oikealle korkeudelle rivillään */
-    line-height: 1;
+    vertical-align: middle; /* Pitää ympyrän oikealla kohdalla rivillään */
 }
 
-/* Molemmat pentagrammit pakotetaan tismalleen samaan grid-soluun päällekkäin */
-
+/* Molemmat pentagrammit lukitaan tismaleen ympyrän keskipisteeseen */
 .pentagram-white, 
 .pentagram-black {
-    grid-area: 1 / 1; 
-    line-height: 1;
-    transform: translateY(-0.4em);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Siirtää merkin keskipisteen tasan ympyrän keskelle */
+    line-height: 0; /* Poistaa fontin oletusrivivälin, jotta alareunaan ei jää tyhjää */
 }
 
 /* Värit */
