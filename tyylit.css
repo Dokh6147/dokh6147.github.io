@@ -112,18 +112,18 @@ body {
         text-align: left; 
     }
 }
-   /* -----------------------------------------------------------
+/* -----------------------------------------------------------
  * 10. ALAREUNAN TEKSTIKENTTÄ
  * ----------------------------------------------------------- */
 .footer-text {
-    font-size: 1.2em; /* Sama koko kuin päätekstillä */
+    font-size: 1.2em;
     line-height: 1.6;
-    margin-top: 60px; /* Jättää reilusti happea yläpuolella olevien kuvien ja tämän tekstin väliin */
+    margin-top: 60px; 
     margin-bottom: 20px;
-    text-align: justify; /* Tasaa tekstin molempiin reunoihin ylätekstin tavoin */
+    
+    text-align: center; /* TÄMÄ KESKITTÄÄ TEKSTIN */
+    white-space: pre-line; /* TÄMÄ MUUTTAA KOODIN RIVINVAIHDOT SUORAAN <br>-TAGEIKSI */
 }
-
+/* Vain yläteksti tasataan vasemmalle mobiilissa, alateksti pysyy keskitettynä */
     .main-text {
-        text-align: left; /* Mobiilissa tasattu teksti voi näyttää huonolta, muutetaan vasemmalle tasatuksi */
-    }
-}
+        text-align: left;
