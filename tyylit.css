@@ -29,11 +29,19 @@ body {
     text-align: center; /* Keskittää kuvan */
     margin-bottom: 30px; /* Tyhjä tila kuvan ja otsikon väliin */
 }
-
-.top-image {
-    max-width: 100%; /* Estää kuvaa kasvamasta ulos säiliöstä */
-    height: auto; /* Pitää kuvan mittasuhteet oikeina, ettei se veny */
+ .top-image {
+    font-family: 'Times New Roman', serif;
+    text-align: center; /* Keskittää  */
+    font-size: 5.8em; /* Otsikon  */
+    font-weight: normal; /* Voidaan pitää normaalina retromman fiiliksen vuoksi */
+    color: white;
+    margin-bottom: 20px;
 }
+
+<-- JOS LAITTAA KUVAN TILALLE .top-image 
+    max-width: 100%; /* Estää kuvaa kasvamasta ulos säiliöstä */
+    height: auto; /* Pitää kuvan mittasuhteet oikeina, ettei se veny */ -->
+
 
 /* -----------------------------------------------------------
  * 5. PÄÄOTSIKKO
