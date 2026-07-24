@@ -23,26 +23,48 @@ body {
 }
 
 /* -----------------------------------------------------------
- * 4. YLÄKUVA
+ * 4. YLÄKUVA / SYMBOLI PÄÄLLEKKÄISILLÄ MERKEILLÄ
  * ----------------------------------------------------------- */
 .top-image-container {
-    text-align: center; /* Keskittää kuvan */
-    margin-bottom: 30px; /* Tyhjä tila kuvan ja otsikon väliin */
-}
- .top-image {
-    font-family: 'Times New Roman', serif;
-    text-align: center; /* Keskittää  */
-    font-size: 5.8em; /* Otsikon  */
-    font-weight: normal; /* Voidaan pitää normaalina retromman fiiliksen vuoksi */
-    color: white;
-    margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-<-- JOS LAITTAA KUVAN TILALLE .top-image 
-    max-width: 100%; /* Estää kuvaa kasvamasta ulos säiliöstä */
-    height: auto; /* Pitää kuvan mittasuhteet oikeina, ettei se veny */ -->
+/* Tämä on ympyrä, joka pitää pentagrammit sisällään */
+.top-symbol {
+    position: relative; /* Tämä on tärkeä! Se lukitsee sisällä olevat absoluuttiset elementit tähän laatikkoon */
+    display: inline-flex;
+    width: 1.5em;
+    height: 1.5em;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    font-family: 'Junicode', serif;
+    font-size: 5em;
+    
+    /* Varmistetaan, että ympyrän sisusta on saman värinen kuin sivun tausta, 
+       jotta valkoinen merkki erottuu oikein */
+    background-color: #f4f1ea; 
+}
 
+/* Yhteiset säännöt molemmille pentagrammeille: 
+   Irrotetaan ne ja keskitetään täydellisesti ympyrän keskelle */
+.pentagram-white, 
+.pentagram-black {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Tämä kikka pakottaa merkkien keskipisteet tismalleen päällekkäin */
+}
 
+/* Valkoinen ylöspäinen */
+.pentagram-white {
+    color: #ffffff;
+}
+
+/* Musta alaspäinen */
+.pentagram-black {
+    color: #222222; /* Käytetään samaa pehmeää mustaa kuin teksteissä */
+}
 /* -----------------------------------------------------------
  * 5. PÄÄOTSIKKO
  * ----------------------------------------------------------- */
