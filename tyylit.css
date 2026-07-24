@@ -54,6 +54,7 @@ body {
     line-height: 1.6; /* Riviväli, tekee tekstistä helppolukuista */
     margin-bottom: 50px; /* Tyhjä tila ennen kolmen kuvan rivistöä */
     text-align: justify; /* Tekstin tasaus molempiin reunoihin (klassinen kirjatyyli) */
+    white-space: pre-line;
 }
 
 /* -----------------------------------------------------------
@@ -71,6 +72,7 @@ body {
     flex: 1; /* Tekee kaikista kolmesta sarakkeesta täsmälleen yhtä leveät */
     display: flex;
     flex-direction: column; /* Laittaa kuvan ja tekstin allekkain sarakkeen sisällä */
+    white-space: pre-line;
 }
 
 .column-image {
