@@ -28,19 +28,20 @@ body {
 }
 
 /* -----------------------------------------------------------
- * 4. YLÄKUVA / SYMBOLI PÄÄLLEKKÄISILLÄ MERKEILLÄ
+ * 4. YLÄKUVA / SYMBOLI GRID-ASETTELULLA
  * ----------------------------------------------------------- */
 .top-image-container {
     text-align: center;
     margin-bottom: 30px;
 }
 
+/* Käytetään Grid-asettelua, joka keskittää kaiken täydellisesti keskelle */
 .top-symbol {
-    position: relative;
-    display: inline-flex;
-    width: 0.5em;          /* Muutettu 1.5em -> 1em, jotta ympyrä tiivistyy merkin ympärille */
-    height: 0.5em;         /* Sama korkeudelle */
-    box-sizing: border-box; /* Varmistaa, että reunus mahtuu tähän 1em-kokoon */
+    display: inline-grid;
+    place-items: center; /* Keskittää elementit suoraan keskelle vaakasuunnassa ja pystysuunnassa */
+    width: 0.4em;
+    height: 0.4em;
+    box-sizing: border-box;
     border: 3px solid #222222;
     border-radius: 50%;
     font-family: 'JunicodeVF', serif;
@@ -48,24 +49,20 @@ body {
     background-color: #f4f1ea; 
 }
 
-/* Yhteiset säännöt molemmille pentagrammeille: 
-   Irrotetaan ne ja keskitetään täydellisesti ympyrän keskelle */
+/* Pinotaan molemmat merkit tismaleen samaan ruutuun */
 .pentagram-white, 
 .pentagram-black {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Tämä kikka pakottaa merkkien keskipisteet tismalleen päällekkäin */
+    grid-area: 1 / 1; /* Pakottaa molemmat elementit saman ruudun päällekkäin */
+    line-height: 1;   /* Poistaa fontin oletusrivikorkeuden aiheuttaman alas valumisen */
 }
 
-/* Valkoinen ylöspäinen */
+/* Värit pysyvät ennallaan */
 .pentagram-white {
     color: #ffffff;
 }
 
-/* Musta alaspäinen */
 .pentagram-black {
-    color: #222222; /* Käytetään samaa pehmeää mustaa kuin teksteissä */
+    color: #222222;
 }
 /* -----------------------------------------------------------
  * 5. PÄÄOTSIKKO
