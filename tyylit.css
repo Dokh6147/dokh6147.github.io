@@ -1,0 +1,114 @@
+/* -----------------------------------------------------------
+ * 1. FONTIT
+ * ----------------------------------------------------------- */
+
+/* Määritellään Junicode-fontti. Jos lataat fonttitiedoston (esim. junicode.woff2)
+   samaan kansioon, voit laittaa url-kohtaan tiedoston nimen. */
+@font-face {
+    font-family: 'Junicode';
+    src: local('Junicode'), local('Junicode-Regular');
+    /* Esimerkki fontin linkityksestä omalta koneelta:
+       src: url('Junicode.woff2') format('woff2'); */
+}
+
+/* -----------------------------------------------------------
+ * 2. YLEISET ASETUKSET (BODY)
+ * ----------------------------------------------------------- */
+body {
+    background-color: #f4f1ea; /* Hieman vanhahtava, taitettu paperin sävy taustalle */
+    color: #222222; /* Ei aivan pikimusta teksti, retrotyylissä luettavampi */
+    font-family: 'EB Garamond', serif; /* Oletusfonttina leipätekstille EB Garamond */
+    margin: 0; /* Poistaa selaimeen vakiona tulevat valkoiset reunat */
+    padding: 30px 15px; /* Antaa tilaa ylös ja sivuille, ettei teksti osu ruudun reunaan */
+}
+
+/* -----------------------------------------------------------
+ * 3. PÄÄSÄILIÖ (JOKA PITÄÄ KAIKEN LINJASSA)
+ * ----------------------------------------------------------- */
+.container {
+    max-width: 960px; /* Tämä arvo määrittää sivun ja kuvien/tekstin maksimileveyden */
+    margin: 0 auto; /* Tämä keskittää koko sivuston keskelle näyttöä */
+}
+
+/* -----------------------------------------------------------
+ * 4. YLÄKUVA
+ * ----------------------------------------------------------- */
+.top-image-container {
+    text-align: center; /* Keskittää kuvan */
+    margin-bottom: 30px; /* Tyhjä tila kuvan ja otsikon väliin */
+}
+
+.top-image {
+    max-width: 100%; /* Estää kuvaa kasvamasta ulos säiliöstä */
+    height: auto; /* Pitää kuvan mittasuhteet oikeina, ettei se veny */
+}
+
+/* -----------------------------------------------------------
+ * 5. PÄÄOTSIKKO
+ * ----------------------------------------------------------- */
+.main-title {
+    font-family: 'Junicode', 'Times New Roman', serif; /* Käyttää Junicodea, tai varafonttina Times New Romania */
+    text-align: center; /* Keskittää otsikon */
+    font-size: 2.8em; /* Otsikon koko */
+    font-weight: normal; /* Voidaan pitää normaalina retromman fiiliksen vuoksi */
+    margin-bottom: 20px;
+}
+
+/* -----------------------------------------------------------
+ * 6. PÄÄLEIPÄTEKSTI (OTSIKON ALLA)
+ * ----------------------------------------------------------- */
+.main-text {
+    font-size: 1.2em; /* Tekstin koko */
+    line-height: 1.6; /* Riviväli, tekee tekstistä helppolukuista */
+    margin-bottom: 50px; /* Tyhjä tila ennen kolmen kuvan rivistöä */
+    text-align: justify; /* Tekstin tasaus molempiin reunoihin (klassinen kirjatyyli) */
+}
+
+/* -----------------------------------------------------------
+ * 7. KOLMEN KUVAN ASSETELU (RIVISTÖ)
+ * ----------------------------------------------------------- */
+.three-column-grid {
+    display: flex; /* Flexbox mahdollistaa asioiden laittamisen rinnakkain joustavasti */
+    gap: 30px; /* Kunkin kolmen kuvan/sarakkeen väliin jäävä tyhjä tila */
+}
+
+/* -----------------------------------------------------------
+ * 8. YKSITTÄINEN SARAKE JA SEN SISÄLTÖ
+ * ----------------------------------------------------------- */
+.column {
+    flex: 1; /* Tekee kaikista kolmesta sarakkeesta täsmälleen yhtä leveät */
+    display: flex;
+    flex-direction: column; /* Laittaa kuvan ja tekstin allekkain sarakkeen sisällä */
+}
+
+.column-image {
+    width: 100%; /* Pakottaa pikkukuvan täyttämään koko sarakkeen leveyden */
+    height: auto; /* Pitää pikkukuvan mittasuhteet oikeina */
+    margin-bottom: 15px; /* Tilaa kuvan ja alla olevan tekstin väliin */
+}
+
+.column-text {
+    font-size: 1.1em;
+    line-height: 1.5;
+    margin: 0;
+    text-align: justify; /* Tasaa myös pikkukuvien tekstit reunoihin */
+}
+
+/* -----------------------------------------------------------
+ * 9. MOBIILIYSTÄVÄLLISYYS (MEDIA QUERY)
+ * ----------------------------------------------------------- */
+/* Nämä säännöt otetaan käyttöön VAIN, jos laitteen näyttö on 768px leveä tai kapeampi (esim. älypuhelin) */
+@media (max-width: 768px) {
+    .three-column-grid {
+        flex-direction: column; /* Muuttaa sarakkeet rinnakkaisista päällekkäisiksi */
+        gap: 40px; /* Antaa päällekkäisille kuville hieman isomman välin */
+    }
+
+    .main-title {
+        font-size: 2.2em; /* Pienentää pääotsikkoa hieman pienille näytöille */
+    }
+
+    .main-text {
+        text-align: left; /* Mobiilissa tasattu teksti voi näyttää huonolta, muutetaan vasemmalle tasatuksi */
+    }
+}
